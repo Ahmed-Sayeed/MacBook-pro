@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice makes a men tyred</title>
+    <!--------------- this link is for Tailwind CSS ------------->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!----------- here is the plane CSS for hover effect-------------->
+    <style>
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+   <header></header> 
+   <main class="grid grid-cols-2 mt-16">
+        <div class="left-contant banner-image mx-20">
+            <img src="images/mac.png" alt="">
+        </div>
+        <div class="right-contant purchase-info mr-12">
+            <!-------- here is the purchase info title ----------->
+            <h2 class="text-4xl font-bold mb-4">Customize your Blue 24-inch iMac with Apple M1 chip.</h2>
+            <p>Apple M1 chip With 8-core CPU with 4 performance cores and 4 effeciency cores. 7-conre CPU and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbdit / USB 4 ports Magic Mouse Magic Keyboard- US English.</p>
+            <!-------------- here is the memory catagory ------------->
+            <div class="memory mt-10">
+                <span class="block font-bold mb-1">Memory</span>
+                <button class="border-2 mr-4 px-4" id="memory">8GB unified memory</button>
+                <button id="advance-memory" class="border-2 px-4">16GB unified memory</button>
+            </div>
+            <!-------------- here is the Storage catagory ------------->
+            <div class="storage my-10">
+                <span class="block font-bold mb-1">Storage</span>
+                <button id="storage" class="border-2 mr-4 px-4">256GB SSD storage</button>
+                <button id="advance-storage" class="border-2 mr-4 px-4">512GB unified memory</button>
+                <button id="super-advance-storage" class="border-2 px-4">1TB unified memory</button>
+            </div>
+             <!-------------- here is the delevery option catagory ------------->
+             <div class="delivery-option my-10">
+                <span class="block font-bold mb-1">Choose your delivery option</span>
+                <button id="normal-delivery" class="border-2 mr-4 px-4">Friday, Aug 25 FREE prime Delivery</button>
+                <button id="argent-delivery" class="border-2 px-4">Friday, Aug 21 FDelivery charge $20</button>
+            </div>
+            <!--------- here is the calculation section ------------>
+            <section class="calculation w-2/5 mt-20">
+                <div class="best-price border-b flex justify-between py-2">
+                    <h5 class="font-bold">Best Price</h5>
+                    <h5 class="font-bold">$ <span id="best-price">1299</span></h5>
+                </div>
+                <div class="best-price border-b flex justify-between py-2">
+                    <h5 class="font-bold">Extra Memory Cost</h5>
+                    <h5 class="font-bold">$ <span id="memory-cost">0</span></h5>
+                </div>
+                <div class="best-price border-b flex justify-between py-2">
+                    <h5 class="font-bold">Extra Storage Cost</h5>
+                    <h5 class="font-bold">$ <span id="storage-cost">0</span></h5>
+                </div>
+                <div class="best-price border-b-4 flex justify-between py-2">
+                    <h5 class="font-bold">Delivery Charge</h5>
+                    <h5 class="font-bold">$ <span id="delivery-cost">0</span></h5>
+                </div>
+                <div class="best-price border-b flex justify-between py-2">
+                    <h5 class="font-bold">Total Price</h5>
+                    <h5 class="font-bold">$ <span id="total-price">1299</span></h5>
+                </div>
+            </section>
+            <div class="promo-code mt-2 mb-8">
+                <h5 id="message">Add Promo code to get 20% discount</h5>
+                <input type="text" id="promo-input" id="promo-input" class="border pl-2 pb-1">
+                <input type="submit" value="Apply" id="apply-promo" class="bg-red-600 text-white px-4 pb-1 cursor-pointer">
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <hr>
+        <h1 class="text-4xl font-bold text-center p-4">Total cost after discount: $<span id="total-cost">1299</span> </h1>
+    </footer>
+   
+    
+    
+
+  <!------------- this link is for javascript ----------------->
+  <script src="imac.js"></script>
+</body>
+</html>
